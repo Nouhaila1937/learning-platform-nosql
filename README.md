@@ -1,35 +1,15 @@
-# Projet de fin de module NoSQL
+# Course Management System
 
-Pour ce projet, vous allez créer une petite API qui va servir de backend à une plateforme d'apprentissage en ligne. J'ai préparé la structure du projet avec une organisation professionnelle du code, comme vous pouvez le constater dans ce dépôt Github.
+Pour ce projet, on va créer une petite API qui va servir de backend à une plateforme d'apprentissage en ligne.
 
 Commençons par l'organisation pratique :
 
-1. Création de votre dépôt :
-   - Sur Github.com
-   - Créez un nouveau dépôt public
-   - Nommez-le "learning-platform-nosql"
-   - Ne l'initialisez pas avec un README pour le moment
-
-2. Configuration de votre environnement local :
-   ```bash
-   # Clonez mon dépôt template (ce dépôt)
-   git clone https://github.com/pr-daaif/learning-platform-template
-   
-   # Renommez le dépôt origin
-   cd learning-platform-template
-   git remote remove origin
-   
-   # Ajoutez votre dépôt comme nouvelle origine
-   git remote add origin https://github.com/[votre-compte]/learning-platform-nosql
-   
-   # Poussez le code vers votre dépôt
-   git push -u origin main
-   ```
-
-3. Installation des dépendances :
-   ```bash
-   npm install
-   ```
+1. Structure du Projet
+   - config/: Gestion des connexions (MongoDB, Redis) et variables d'environnement.
+   - controllers/: Logique métier des entités (exemple: CourseController).
+   - routes/: Points d'entrée API pour chaque ressource.
+   - services/: Utilitaires pour manipuler les données.
+   - app.js: Point d'entrée principal.
 
 Je vous propose une structure de code qui suit les bonnes pratiques de développement. Vous trouverez dans le code des commentaires avec des **questions qui vous guideront dans votre réflexion**. Ces questions sont importantes car elles vous aideront à comprendre les choix d'architecture.
 
