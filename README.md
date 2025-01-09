@@ -149,8 +149,7 @@ mongod
 Utiliser la commande 
 ```bash
 npm start
-```
-![Image de configuration Redis](images/image2.png)
+``` 
 
 **Si tu n'a pas le nodemon donc tu l'installe via ces commandes 
 ```bash
