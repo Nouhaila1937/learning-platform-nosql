@@ -18,16 +18,16 @@ function validateEnv() {
   // Si une variable manque, lever une erreur explicative
   requiredEnvVars.forEach((varName) => {
     if (!process.env[varName]) {
-      throw new Error(`La variable d'environnement ${varName} est manquante.
-        Veuillez la définir avant de lancer l'application.`);
-        }
-        });
+      throw new Error(`Missing required environment variable: ${varName}`);
+    }
+  });
 }
+
 validateEnv();
 
 module.exports = {
   mongodb: {
-    uri: process.env.MONGODB_URI|| 'mongodb://localhost:27017/learning_platform', // Par défaut Mongo local path
+    uri: process.env.MONGODB_URI || 'mongodb://localhost:27017/learning_platform', // Par défaut Mongo local path
     dbName: process.env.MONGODB_DB_NAME || 'learning_platform',
   },
   redis: {
